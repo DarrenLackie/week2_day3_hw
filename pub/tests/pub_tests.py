@@ -21,11 +21,11 @@ class TestPub(unittest.TestCase):
         self.assertEqual(105, self.pub.till)
 
     def test_check_customer_age(self):
-        self.pub.check_customer_age(self.customer2)
-        if self.pub.check_customer_age(self.customer2):
+        customer_age = self.pub.check_customer_age(self.customer2)
+        if customer_age:
             self.pub.sell_drink(self.customer2, self.drink)
         self.assertEqual(100, self.pub.till)
-        
 
-
-    
+    # def test_check_customer_drunkenness(self):
+    #     customer_drunkenness = self.pub.check_customer_drunkenness(self.customer)
+    #     if customer_drunkenness:
