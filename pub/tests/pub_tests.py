@@ -22,6 +22,8 @@ class TestPub(unittest.TestCase):
 
     def test_check_customer_age(self):
         self.pub.check_customer_age(self.customer2)
+        if self.pub.check_customer_age(self.customer2):
+            self.pub.sell_drink(self.customer2, self.drink)
         
 
 
