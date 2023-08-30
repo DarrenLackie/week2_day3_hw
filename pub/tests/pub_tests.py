@@ -24,6 +24,7 @@ class TestPub(unittest.TestCase):
         self.pub.check_customer_age(self.customer2)
         if self.pub.check_customer_age(self.customer2):
             self.pub.sell_drink(self.customer2, self.drink)
+        self.assertEqual(100, self.pub.till)
         
 
 

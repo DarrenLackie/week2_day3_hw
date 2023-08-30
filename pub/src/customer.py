@@ -4,9 +4,8 @@ class Customer:
         self.wallet = input_wallet
         self.age = input_age
         self.drunkeness = 0
-    
-        
-    
+
+
     def buy_a_drink(self, input_drink):
         self.reduce_wallet(input_drink.price)
         self.drunkeness += input_drink.alcohol_level
