@@ -16,9 +16,21 @@ class TestPub(unittest.TestCase):
     def test_pub_has_same_name(self):
         self.assertEqual("big dirty bill's big dirty tavern", self.pub.name)
 
+    def test_pub_has_till(self):
+        self.assertEqual(100, self.pub.till)
+
     def test_sell_drink(self):
         self.pub.sell_drink(self.customer, self.drink)
         self.assertEqual(105, self.pub.till)
+
+    # def test_pub_can_sell_drink(self):
+    #     self.pub.add_drink(self.drink)
+    #     self.pub.add_drink(self.drink2)
+    #     self.pub.sell_drink(self.customer, self.drink)
+    #     self.pub.sell_drink(self.customer2, self.drink)
+    #     self.assertEqual(145, self.customer.wallet)
+    #     self.assertEqual(105, self.pub.till)
+
 
     def test_check_customer_age(self):
         customer_age = self.pub.check_customer_age(self.customer2)

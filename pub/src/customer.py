@@ -1,9 +1,9 @@
 class Customer:
-    def __init__(self, input_name, input_wallet, input_age):
+    def __init__(self, input_name, input_wallet, input_age, input_drunkenness):
         self.name = input_name
         self.wallet = input_wallet
         self.age = input_age
-        self.drunkenness = 0
+        self.drunkenness = input_drunkenness
 
 
     def buy_a_drink(self, input_drink):
